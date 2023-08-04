@@ -18,14 +18,11 @@ export default function MovieDisplay(props){
             <h4>{movie.Title}</h4>
             <h4>{movie.Year}</h4>
             <h4>{movie.Genre}</h4>
-            {movie.Poster && <img src={movie.Poster}/> }
+            {movie.Poster == 'N/A'? null: <img src={movie.Poster} alt={movie.Title}/> }
             <h4>{movie.Plot}</h4>
             </>
         )
     }
-
-
-
 
 
 
