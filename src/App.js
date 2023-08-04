@@ -13,16 +13,23 @@ function App() {
 
 
   const getMovie = async (searchTerm) => {
-    const res = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`)
-    const data = await res.json()
-    console.log(data);
-    setMovie(data)
+    try {
+      
+        const res = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`)
+        const data = await res.json()
+        console.log(data);
+        setMovie(data)
+    } catch (error) {
+        console.log(error);
+    }
   }
 
-  useEffect(() => {getMovie('heat')},[])
+  useEffect(() => {
+    getMovie('heat')}
+  ,[])
 
   return (
-    <div className="App">
+    <div className="bg-slate-600 flex flex-col justify-center items-center">
       <Form getMovie={getMovie}/>
       <MovieDisplay movie={movie}/>
     </div>

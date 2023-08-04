@@ -21,7 +21,7 @@ export default function Form(props){
         <h1> Form </h1>
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Insert Movie Name" value={formData} onChange={handleChange}/>
-            <button>Search</button>
+            <button className="bg-yellow-500 px-0.5">Search</button>
 
         </form>
         </>

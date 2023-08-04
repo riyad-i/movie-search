@@ -14,13 +14,13 @@ export default function MovieDisplay(props){
     
     const yesMovie = () => {
         return(
-            <>
-            <h4>{movie.Title}</h4>
-            <h4>{movie.Year}</h4>
-            <h4>{movie.Genre}</h4>
-            {movie.Poster == 'N/A'? null: <img src={movie.Poster} alt={movie.Title}/> }
-            <h4>{movie.Plot}</h4>
-            </>
+            <div className="mb-12 text-white">
+                <h4>{movie.Title}</h4>
+                <h4>{movie.Year}</h4>
+                <h4>{movie.Genre}</h4>
+                {movie.Poster == 'N/A'? null: <img src={movie.Poster} alt={movie.Title}/> }
+                <h4>{movie.Plot}</h4>
+            </div>
         )
     }
 
